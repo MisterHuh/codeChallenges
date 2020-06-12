@@ -2,18 +2,19 @@
 
 function arrayDiff($a, $b)
 {
-  // your code here
-  $count = count($a);
 
-  for ($index = 0; $index <= $count; $index++) {
-    if ($b = $a[$count]) {
-      unset($a[$count]);
-    };
-  };
-  echo $b;
+  for ($index = 0; $index < count($b); $index++) {
+
+    $key = array_search($b[$index], $a);
+
+    if ($key >= 0) {
+      array_splice($a, $key, 1);
+      $index--;
+    }
+  }
 
   return $a;
-}
+};
 
 <?php use PHPUnit\Framework\TestCase;
 class MyTestCasesTest extends TestCase
