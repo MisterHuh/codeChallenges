@@ -16,6 +16,12 @@ function arrayDiff($a, $b)
   return $a;
 };
 
+
+// top solution //
+function arrayDiff($a, $b) {
+  return array_values(array_diff($a, $b));
+};
+
 <?php use PHPUnit\Framework\TestCase;
 class MyTestCasesTest extends TestCase
 {
