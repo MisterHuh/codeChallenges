@@ -1,5 +1,15 @@
 <?php
 
+/*
+
+You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.
+
+*/
+
 function positive_sum($arr)
 {
   // Your code here
@@ -15,14 +25,27 @@ function positive_sum($arr)
   return $answer;
 }
 
-// top solutoin
+// top solutoins
 
 function positive_sum($a)
 {
   return array_sum(array_filter($a, function ($n) {
     return $n > 0;
   }));
-}
+};
+
+
+
+function positive_sum($arr)
+{
+  $sum = 0;
+
+  foreach ($arr as $element) {
+    $sum += $element > 0 ? $element : 0;
+  }
+
+  return $sum;
+};
 
 
 class PositiveSumTest extends TestCase
