@@ -31,19 +31,26 @@ function readLine() {
 
 function diagonalDifference(arr) {
   // Write your code here
-  console.log(arr);
-  console.log(arr.length);
-  let first_diag = 0;
-  let second_diag = 0;
 
-  0[0] + 1[1] + 2[2]
-  0[2] + 1[1] + 2[0]
+  let first_diag = arr[0][0] + arr[1][1] + arr[2][2];
+  let second_diag = arr[0][2] + arr[1][1] + arr[2][0];
 
-  for (let outerIndex = 0; outerIndex < arr.length; outerIndex++) {
-    for (let innerIndex = 0; innerIndex < arr[outerIndex].length; innerIndex++) {
-      first_diag +=
-        };
-  }
+  let answer = first_diag - second_diag;
+
+  return Math.abs(answer);
+
+    // 1   2   3
+    // 4   5   6
+    // 9   8   9
+
+    // 0[0] + 1[1] + 2[2]
+    // 0[2] + 1[1] + 2[0]
+
+  // for (let outerIndex = 0; outerIndex < arr.length; outerIndex++) {
+  //   for (let innerIndex = 0; innerIndex < arr[outerIndex].length; innerIndex++) {
+  //     first_diag +=
+  //       };
+  // }
 
 }
 
