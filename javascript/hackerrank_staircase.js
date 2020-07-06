@@ -25,6 +25,13 @@ function readLine() {
 // Complete the staircase function below.
 function staircase(n) {
 
+  /* simpleset solution found on discussion */
+  /* padStart() pads the current string with another string
+      until the resulting string reaches the given length*/
+  for (let i = 1; i <= n; i++) {
+    console.log("#".repeat(i).padStart(n));
+  };
+
     let length = parseInt(n);
     let sym = "#";
     let space = " ";
