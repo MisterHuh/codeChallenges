@@ -35,7 +35,12 @@ function miniMaxSum(arr) {
     let bigTest = arr.indexOf(removeBig);
 
     for (let i = 0; i < arr.length; i++) {
-        if ( !(i === smallTest) && !(i === bigTest) ) {
+        if (smallTest === bigTest) {
+            let equalSmall = arr[i];
+            console.log("index is: ", arr[i]);
+            // console.log(ans);
+            return;
+        } else if (!(i === smallTest) && !(i === bigTest)) {
             big += arr[i];
             small += arr[i]
         } else if (i === smallTest) {
