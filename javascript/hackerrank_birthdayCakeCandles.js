@@ -24,6 +24,14 @@ function readLine() {
   return inputString[currentLine++];
 }
 
+/* better answer using filter */
+// function birthdayCakeCandles(ar) {
+
+//   let big = Math.max.apply(Math, ar);
+//   let ans = ar.filter(index => index == big);
+//   return ans.length;
+// }
+
 // Complete the birthdayCakeCandles function below.
 function birthdayCakeCandles(ar) {
 
