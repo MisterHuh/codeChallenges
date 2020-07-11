@@ -28,32 +28,23 @@ function readLine() {
 function timeConversion(s) {
 
   let x = s.slice(-2);
-  let hour = s.substring(0, 2);
+  let hour = parseInt(s.substring(0, 2));
   let ans = s.substr(2, 6);
 
-  console.log('x is:', x);
-  console.log('s is:', s);
-  console.log('hour is: ', hour);
-  console.log('ans is: ', ans);
+  if (x == "AM") {
+    if (!hour || hour === 12) {
+      hour = "00";
+    } else if (hour <= 9) {
+      hour = "0" + hour;
+    };
+  } else if (x == "PM") {
+    if (!(hour === 12)) {
+      hour = hour + 12;
+    }
+  }
+  const answer = hour + ans;
+  return answer;
 
-  if (x === "PM") {
-    let test = parseInt(hour);
-    console.log('test is: ', test);
-
-    let newHour = test + 12;
-    console.log('newHour is: ', newHour);
-
-    const answer = newHour + ans;
-    // console.log("reached");
-    console.log(answer);
-    return answer;
-    // return answer;
-  };
-
-  // return s;
-  const answer = s.substr(8)
-  console.log(answer);
-  return;
 }
 
 function main() {
