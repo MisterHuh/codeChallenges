@@ -58,3 +58,9 @@ function main() {
 
   ws.end();
 }
+
+
+// if PM, hour + 12
+// if 12PM, hour = 12
+
+// if 12AM, hour = 00
