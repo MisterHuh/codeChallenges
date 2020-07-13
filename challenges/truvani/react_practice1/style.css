@@ -1,0 +1,87 @@
+#root {
+  height: 100vh;
+  width: calc(100vw - (100vw - 100%));
+  border: 1px solid black;
+}
+
+.mini-navbar, .navbar {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 0 10% 0 10%;
+}
+
+.mini-navbar {
+  height: 5vh;
+  line-height: 5vh;
+}
+
+.mini-navbar > div {
+  width: 25%;
+}
+
+.navbar {
+  height: 4vh;
+  line-height: 4vh;
+  background-color: black;
+}
+
+.navbar > div {
+  width: calc(100vw / 9);
+  color: white;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: row;
+  padding: 2% 10% 2% 10%;
+
+}
+
+.jumbotron > div {
+  height: 30vh;
+}
+
+.jumboLanguage {
+  width: 60vw;
+  border: 1px solid blue;
+  padding-left: 1%;
+}
+
+.jumboSubHeader {
+  padding: 1% 0 1% 0;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+.jumboMainHeader {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.jumboMainHeader > p {
+  padding: 1% 0 1% 0;
+}
+
+.jumboImg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40vw;
+  border: 1px solid red;
+}
+
+.jumboImg > div {
+  height: 50%;
+  width: 50%;
+  line-height: 15vh;
+  text-align: center;
+}
+
+.jumboButton {
+  background-color: #ba4fa1;
+  border-radius: 25%;
+  height: 20vh;
+  text-transform: uppercase;
+  color: black;
+}
