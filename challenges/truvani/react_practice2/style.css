@@ -1,0 +1,16 @@
+#root {
+  min-height: 100vh;
+  min-width: calc(100vw - (100vw - 100%));
+/*   border: 1px solid black; */
+}
+
+.postItemContainer {
+  margin: 2%;
+/*   padding: 2%; */
+/*   margin: auto; */
+/*   border: 1px solid black; */
+}
+
+.postItem {
+/*   padding: 2%; */
+}
