@@ -32,32 +32,15 @@ function readLine() {
 function gradingStudents(grades) {
   // Write your code here
 
-  // let i = 0;
-  // while (i < grades.length) {
-
-  //   let modulus = grades[i] % 5;
-
-  //   if (grades[i] <= 37) {
-  //     null;
-  //   } else if (grades[i] <= 39) {
-  //     grades[i] = 40;
-  //   } else if (modulus == 3 || modulus == 8) {
-  //     grades[i] += 2;
-  //   } else if (modulus == 4 || modulus == 9) {
-  //     grades[i] += 1;
-  //   }
-  //   console.log(grades[i]);
-  //   i++;
-  // }
-
-  for (let i = 0; i < grades.length; i++) {
+  let array = [];
+  let i = 0;
+  while (i < grades.length) {
 
     let modulus = grades[i] % 5;
-
-    console.log("modulus is: ", modulus);
+    let ans = grades[i];
 
     if (grades[i] <= 37) {
-      null;
+      grades[i] = ans;
     } else if (grades[i] <= 39) {
       grades[i] = 40;
     } else if (modulus == 3 || modulus == 8) {
@@ -65,8 +48,22 @@ function gradingStudents(grades) {
     } else if (modulus == 4 || modulus == 9) {
       grades[i] += 1;
     }
-    console.log("grade is ", grades[i]);
+    array.push(grades[i])
+    i++;
   }
+
+  return array;
+
+  /* shorter solution */
+
+  //  return grades.map((n) => {
+  //     let diff = 5 - (n % 5);
+  //     if(diff < 3 && n >= 38) {
+  //         n += diff;
+  //     }
+
+  //     return n;
+  // })
 
 
 }
