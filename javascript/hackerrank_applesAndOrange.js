@@ -49,6 +49,16 @@ function countApplesAndOranges(s, t, a, b, apples, oranges) {
 
     console.log(appleCounter);
     console.log(orangeCounter);
+
+    // much more simple solution
+    // use filter to check for the condition.
+    // filter will return an array if matching the condition.
+    // simply get the length
+    var test = apples.filter(n => n + a >= s && n + a <= t).length;
+    var test2 = oranges.filter(n => n + b >= s && n + b <= t).length;
+
+    console.log(test);
+    console.log(test2);
 }
 
 function main() {
