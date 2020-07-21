@@ -33,11 +33,15 @@ function bonAppetit(bill, k, b) {
 
   let diff = total / 2;
 
-  if (diff == b) {
-    console.log("Bon Appetit");
-  } else {
-    console.log(b - diff);
-  }
+  /* replaced with ternary operator below */
+  // if (diff == b) {
+  //   console.log("Bon Appetit");
+  // } else {
+  //   console.log(b - diff);
+  // }
+  console.log((diff == b) ? "Bon Appetit" : (b - diff));
+
+
 }
 
 function main() {
