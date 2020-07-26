@@ -24,14 +24,16 @@ function readLine() {
 
 // Complete the birthday function below.
 function birthday(s, d, m) {
-  console.log(s);
-  console.log(d);
-  console.log(m);
+  console.log("array", s);
+  console.log("day", d);
+  console.log("month", m);
 
   let counter = 0;
 
   for (let i = 0; i < s.length; i++) {
-
+    let test = s.slice(i, i + m);
+    let ans = test.reduce()
+    console.log(test);
   }
 
 
