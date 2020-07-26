@@ -24,19 +24,49 @@ function readLine() {
 
 // Complete the birthday function below.
 function birthday(s, d, m) {
-  console.log("array", s);
-  console.log("day", d);
-  console.log("month", m);
+
+  // s is:  [ 1, 2, 1, 3, 2 ]
+  // d is: 3
+  // m is: 2
 
   let counter = 0;
 
   for (let i = 0; i < s.length; i++) {
-    let test = s.slice(i, i + m);
-    let ans = test.reduce()
-    console.log(test);
+    if (s.slice(i, i + m).reduce((x, y) => x + y) == d) {
+        counter++;
+    }
   }
 
+  // same thing as:
 
+  for (let i = 0; i < s.length; i++) {
+    let slice_result = s.slice(i, i + m);
+    // console.log("slice_result is:", slice_result);
+    // slice_result is: [ 1, 2 ]
+    // slice_result is: [ 2, 1 ]
+    // slice_result is: [ 1, 3 ]
+    // slice_result is: [ 3, 2 ]
+
+    // grabs from starting s[i] up untill s[i + m]
+    // instead of looping through the # of m
+
+    let sum = slice_result.reduce((x, y) => x + y);
+
+    // x is the accumulator
+    // y is the currentValue // during the first loop, there is no currentValue
+    // sum is: 3
+    // sum is: 3
+    // sum is: 4
+    // sum is: 5
+    // sum is: 2
+    // console.log("sum is:", sum);
+
+    (sum == d) ? counter++ : null;
+
+
+  }
+
+  return counter;
 }
 
 function main() {
