@@ -33,10 +33,18 @@ function divisibleSumPairs(n, k, ar) {
   let counter = 0;
 
   for (let i = 0; i < ar.length; i++) {
-    for (let x = 1; x < ar.length; x++) {
+    for (let x = 0; x < ar.length; x++) {
       if ((ar[i] < ar[x]) && !((ar[i] + ar[x]) % k)) {
         //   console.log("ar[i] is: ",ar[i]);
         //   console.log("ar[x] is: ",ar[x]);
+
+        // if (ar[i] == 19) {
+        // console.log("i is: ", i);
+        // console.log("x is: ", x);
+        // console.log("[" + ar[i] + " , " + ar[x] + "]");
+        // };
+
+        // console.log("[" + ar[i] + " , " + ar[x] + "]");
         counter++;
       }
       //   console.log("counter is: ", counter);
