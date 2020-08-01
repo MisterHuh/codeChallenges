@@ -30,30 +30,44 @@ function divisibleSumPairs(n, k, ar) {
   // console.log(k);
   // console.log(ar);
 
-  let counter = 0;
+  // let counter = 0;
 
-  for (let i = 0; i < ar.length; i++) {
-    for (let x = 0; x < ar.length; x++) {
-      if ((ar[i] < ar[x]) && !((ar[i] + ar[x]) % k)) {
-        //   console.log("ar[i] is: ",ar[i]);
-        //   console.log("ar[x] is: ",ar[x]);
+  // for (let i = 0; i < ar.length; i++) {
+  //     for (let x = 0; x < ar.length; x++) {
+  //       if ((ar[i] < ar[x]) && !((ar[i] + ar[x])%k) ) {
+  //         //   console.log("ar[i] is: ",ar[i]);
+  //         //   console.log("ar[x] is: ",ar[x]);
 
-        // if (ar[i] == 19) {
-        // console.log("i is: ", i);
-        // console.log("x is: ", x);
-        // console.log("[" + ar[i] + " , " + ar[x] + "]");
-        // };
+  //         // if (ar[i] == 19) {
+  //             // console.log("i is: ", i);
+  //             // console.log("x is: ", x);
+  //             // console.log("[" + ar[i] + " , " + ar[x] + "]");
+  //         // };
 
-        // console.log("[" + ar[i] + " , " + ar[x] + "]");
-        counter++;
+  //         // console.log("[" + ar[i] + " , " + ar[x] + "]");
+  //           counter++;
+  //       }
+  //     //   console.log("counter is: ", counter);
+  //     }
+  //     // return counter;
+  // }
+
+  // console.log("counter is: ", counter);
+  // return counter;
+
+  let count = 0;
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i < j) {
+
+        if ((ar[i] + ar[j]) % k == 0) {
+          count++;
+        }
       }
-      //   console.log("counter is: ", counter);
     }
-    // return counter;
   }
-
-  console.log("counter is: ", counter);
-  return counter;
+  return count;
 
 }
 
